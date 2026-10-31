@@ -232,23 +232,7 @@ export default function App() {
           />
         ) : activeTab === 'menu' ? (
           /* TAB 4: Menu */
-          <MenuView
-            onNavigateTab={(t) => {
-              setActiveWizardDoc(null);
-              setActivePolicyPage(null);
-              setActiveTab(t);
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            onOpenProfile={() => setIsProfileOpen(true)}
-            onOpenSettings={() => setIsSettingsOpen(true)}
-            onOpenPolicies={() => {
-              setActiveWizardDoc(null);
-              setActivePolicyPage(POLICIES_DATA[0]);
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            userName={profile.name}
-            userPhone={profile.phone}
-          />
+          <MenuView />
         ) : (
           /* TAB 1: Home */
           <div className="max-w-4xl mx-auto px-4 py-5 sm:py-6">
